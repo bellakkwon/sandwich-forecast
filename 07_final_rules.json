@@ -1,0 +1,12 @@
+{
+ "selected_leaves":7,
+ "test_start":"2013-01-06",
+ "test_end":"2013-03-24",
+ "selection":"model WAPE strictly below last_week selects model; otherwise retain last_week; mean4 comparison only",
+ "bias_rule":"report separately; does not reverse WAPE selection",
+ "review":"common weeks>=10 AND same sign>=8 AND aggregate Bias>=0.10 or <=-0.10; equality has no sign; common weeks<10 insufficient data",
+ "error_correction":{"allowed":"implementation departures from frozen specification only, e.g. date filter or lag calculation","forbidden":"change specification, thresholds, candidate selection or interpretation rules after results","preservation":"preserve original run and results; corrected run in new directory, record cause, code diff, affected results and before/after metrics"},
+ "shap":"per-week actual model and inputs; native TreeSHAP contributions to raw prediction; clip-to-zero separately; no redesign after explanations",
+ "report":"last4weeks sliced from original final predictions, no rerun",
+ "final_keys":"save baseline-valid actual/lastweek/mean4 keys and SHA256 before training first model"
+}
